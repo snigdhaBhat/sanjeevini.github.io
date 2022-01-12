@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SANJEEVINI HOSPITAL</title>
+  <link rel="stylesheet" type="text/css" href="lab4.css">
+
+  <script type="text/javascript">
+  window.onload = function () {
+   document.getElementById('button').onclick = function() {
+     if(document.getElementById("pass").value == '0000')
+        location.href = "check.html";
+     else
+        document.getElementById("message").innerHTML = 'The password is wrong, try again!';
+   return false;
+}
+}
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <center><h2 id="message">Hello Doctor!</h2>
+    <form action="">
+      <label for="name">DOCTOR ID</label><br>
+      <input type="text" id="doctor_id" name="name" placeholder="Enter ID" required height="30px" width="30px"><br>
+
+      <label for="password">PASSWORD</label><br>
+      <input type="password" id="pass" placeholder="Enter Password" required height="30px" width="30px"><br>
+
+      <input type='submit' height="30px" width="30px" id='button' onclick="function()"><br>
+    </form></center>
+  </div>
+</body>
+</html>

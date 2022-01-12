@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="lab4.css">
+
+    <script type="text/javascript">
+      function conformation()
+      {
+        var password= document.getElementById("pass").value;
+        var cpassword= document.getElementById("cpass").value;
+        if(password == cpassword)
+        {
+          alert("Registration Successful")
+        }
+        else
+        {
+          alert("Password does not match!")
+        }
+      }
+	</script>
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <form action="">
+        <label for="name">NAME</label><br>
+        <input type="text" name="name" placeholder="Enter Name" required height="30px" width="30px"><br>
+
+        <label for="Phone number">PHONE NUMBER</label><br>
+        <input type="number" name="number" placeholder="Enter Number" required height="30px" width="30px"><br>
+
+        <label for="Email">EMAIL ID</label><br>
+        <input type="text" name="name" placeholder="Enter Mail id" required height="30px" width="30px"><br>
+
+        <label for="password">PASSWORD</label><br>
+        <input type="password" id="pass" placeholder="Enter Password" required height="30px" width="30px"><br>
+
+        <label for="cpassword">CONFIRM PASSWORD</label><br>
+        <input type="password" id="cpass" placeholder="re-enter Password" required height="30px" width="30px"><br>
+
+        <button height="30px" width="30px" onclick="conformation()"> Register </button><br>
+      </form>
+    </div>
+  </body>
+</html>

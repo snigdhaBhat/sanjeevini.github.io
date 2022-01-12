@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SANJEEVINI HOSPITAL</title>
+  <link rel="stylesheet" type="text/css" href="lab4.css">
+
+<script type="text/javascript">
+  const pat=[];
+
+  function addName(){
+    do{
+      let num=prompt("Enter number of patients to add:");
+        if(typeof num!='integer')
+          {
+            alert("You can enter "+num+" names only.")
+            var i=1;
+            for (i=1;i<=num;i++)
+             {
+                var name_add=prompt("Enter the name "+i);
+                pat.push(name_add);
+              }
+              alert("all names added!");
+              document.getElementById("message1").innerHTML="This is the updated list";
+              pat.sort();
+              document.getElementById("message2").innerHTML=pat;
+            }
+          else
+           {
+          alert("Invalid number of students has been Entered");
+          }
+              var ch=prompt("You want to re enter the number of patients?y/n");
+              }while (ch=='y'||ch=='Y');
+        }
+
+</script>
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <center><h2 id="message">-: PATIENTS LIST :-</h2></center><br></center>
+      <h4 id="message1" style="text-align:center" ></h4>
+
+      <h5 id="message2" style="text-align:center"></h5>
+
+      <div style="text-align:center">
+        <input type="submit" name="patients" id="button" value="Add list" onclick="addName()" >
+      </div>
+    </div>
+  </body>
+  </html>

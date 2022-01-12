@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+  <head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="lab4.css">
+
+    <script type="text/javascript">
+      function login()
+      {
+        var usrname= document.getElementById("patient_id").value
+        var pwd= document.getElementById("pass").value
+        const p_id = []
+
+        if(usrname>=100 && usrname<=120)
+        {
+          if(pwd=="1234")
+          {
+            alert("Login successful")
+          }
+          else
+          {
+            alert("incorrect password!")
+          }
+        }
+        else
+        {
+          alert("The following usernames are allowed to login:")
+          for (var i=100; i<=120; i++)
+          {
+            p_id.push(i)
+          }
+          alert(p_id)
+        }
+      }
+    </script>
+
+  </head>
+
+    <body>
+      <div class="container">
+
+        <form action="">
+          <label for="name">PATIENT ID</label><br>
+          <input type="text" id="patient_id" name="name" placeholder="Enter ID" required height="30px" width="30px"><br>
+
+          <label for="password">PASSWORD</label><br>
+          <input type="password" id="pass" placeholder="Enter Password" required height="30px" width="30px"><br>
+
+          <button height="30px" width="30px" onclick="login()"> Login </button><br>
+        </form>
+        <p>------------------------------------------------------------------------------------------</p>
+        <p style="text-align: center">If you dont have an account <br>
+          <a href="register.html"><strong>Register now!</strong></a>
+        </p>
+      </div>
+    </body>
+  </html>
